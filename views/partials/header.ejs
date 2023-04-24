@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+	<title>SE PROJECT TEAM 10</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="icon" href="https://f0.pngfuel.com/png/1016/292/red-question-mark-symbol-illustration-png-clip-art.png">
+</head>
+<body style="background-color:maroon ;">
+    	<nav class="navbar navbar-expand-lg navbar-light bg-light m">
+      
+    <div class="container-fluid">
+      <h1 style="text-align:center;" > PESU FORUM</h1>
+  </div>
+  
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+  <%if(!CurrentUser){%>
+    <li class="nav-item active">
+    <a class="nav-link" href="/" style="color:black;background-color:whitesmoke">HOME</a>
+    </li>
+      <li class="nav-item active">
+        <a class="btn btn-primary" href="/register">Sign Up </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Log In</a>
+      </li>
+<% }else{ %>
+  <li class="nav-item active">
+    <li class="nav-item active">
+      <a class="nav-link" href="/qanda">All Questions</a>
+    </li>
+
+
+    <li class="nav-item active">
+        <a class="nav-link" href="/myquestion">My Questions</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/myanswer">My Answers</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/qanda/new">Post Question</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/user">Users</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/myprofile/<%=CurrentUser._id%>">My Profile</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/myque/<%=CurrentUser._id%>">Questions for me</a>
+      </li>
+      </li>
+       <li class="nav-item active">
+        
+        <a class="nav-link" href="/logout">Log Out</a>
+      </li>
+      
+      
+      <% } %>
+      
+     
+      </ul>
+      </div>
+      </div>
+</nav>
